@@ -6,7 +6,9 @@ class Ship(physicalobject.PhysicalObject):
     def __init__(self, *args, **kwargs):
         super(Ship, self).__init__(*args, **kwargs)
 
-        self.rotation = 90
+        self.rotation = -90
+        self.velocity_x = 100
+        self.velocity_y = 100
 
         self.keys = dict(up=False, down=False, left=False, right=False)
 
