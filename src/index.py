@@ -1,9 +1,12 @@
 import pyglet
 import random
-from game import fighter, resources
+from game import fighter, resources, background
 
-window = pyglet.window.Window(width=800, height=600)
+window = pyglet.window.Window(width=1000, height=750)
 batch = pyglet.graphics.Batch()
+
+background = background.Background(
+    resources.background_image, 100, batch)
 
 fighter = fighter.Fighter(batch=batch,
                           x=window.width / 2, y=(window.height / 2) - 150)
@@ -26,6 +29,7 @@ def on_key_release(symbol, modifiers):
 
 
 def update(dt):
+    background.update(dt)
     fighter.update(dt)
 
 

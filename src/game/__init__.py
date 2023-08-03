@@ -1,1 +1,1 @@
-from . import resources, fighter
+from . import resources, fighter, background

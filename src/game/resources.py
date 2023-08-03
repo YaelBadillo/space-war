@@ -7,7 +7,7 @@ def center_image(image):
 
 
 background_image = pyglet.image.load(
-    '/home/yxel/Documents/pyglet/space-war/src/assets/background/Purple\ Nebula/Purple\ Nebula\ 7\ -\ 1024x1024.png')
+    '/home/yxel/Documents/pyglet/space-war/src/assets/background/purple-nebula/purple-nebula-7.png')
 
 fighter_image = pyglet.image.load(
     '/home/yxel/Documents/pyglet/space-war/src/assets/space/Fighter/Idle.png')
