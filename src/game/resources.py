@@ -8,10 +8,10 @@ def center_image(image):
 
 fighter_image = pyglet.image.load(
     '/home/yxel/Documents/pyglet/space-war/src/assets/space/Fighter/Idle.png')
-center_image(fighter_image)
+# center_image(fighter_image)
 
 fighter_move_image = pyglet.image.load(
-    '/home/yxel/Documents/pyglet/space-war/src/assets/space/Fighter/Evasion.png')
+    '/home/yxel/Documents/pyglet/space-war/src/assets/space/Fighter/Move.png')
 center_image(fighter_move_image)
 fighter_move_texture_sequence = pyglet.image.ImageGrid(
     fighter_move_image, rows=1, columns=6)
