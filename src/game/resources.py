@@ -22,3 +22,6 @@ for img in fighter_move_texture_sequence:
 
 fighter_move_animation = pyglet.image.Animation.from_image_sequence(
     fighter_move_texture_sequence, duration=0.8, loop=True)
+
+asteroid_image = pyglet.image.load(
+    '/home/yxel/Documents/pyglet/space-war/src/assets/space-objects/PNG/Meteors/Meteor_07.png')

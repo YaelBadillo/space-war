@@ -33,7 +33,13 @@ def update(dt):
     fighter.update(dt)
 
 
+def generate_asteroids(dt):
+    pass
+
+
 pyglet.clock.schedule_interval(update, 1 / 60.0)
 
-if __name__ == "__main__":
+pyglet.clock.schedule_interval(update, 0.5)
+
+if __name__ == '__main__':
     pyglet.app.run()
