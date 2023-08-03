@@ -7,8 +7,9 @@ class Ship(physicalobject.PhysicalObject):
         super(Ship, self).__init__(*args, **kwargs)
 
         self.rotation = -90
-        self.velocity_x = 300
-        self.velocity_y = 300
+        self.velocity_x = 200
+        self.velocity_y = 200
+        self.scale = 0.8
 
         self.keys = dict(up=False, down=False, left=False, right=False)
 

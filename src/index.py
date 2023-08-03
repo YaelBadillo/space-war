@@ -1,15 +1,13 @@
 import pyglet
 import random
-from game import ship, resources
+from game import fighter, resources
 
 window = pyglet.window.Window(width=800, height=600)
 batch = pyglet.graphics.Batch()
 
-fighter_image = resources.fighter_image
-fighter_image.anchor_x = fighter_image.width // 2
-fighter_image.anchor_y = fighter_image.height // 2
-fighter = ship.Ship(img=resources.fighter_image, batch=batch,
-                    x=window.width / 2, y=(window.height / 2) - 150)
+fighter = fighter.Fighter(batch=batch,
+                          x=window.width / 2, y=(window.height / 2) - 150)
+
 
 @window.event
 def on_draw():

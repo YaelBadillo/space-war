@@ -1,1 +1,1 @@
-from . import ship, resources
+from . import resources, fighter
