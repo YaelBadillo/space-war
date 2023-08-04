@@ -35,7 +35,7 @@ def update(dt):
 
     for meteor in meteors:
         meteor.update(dt)
-    
+
     for meteor in meteors:
         if meteor.y < -meteor.height:
             meteors.remove(meteor)
@@ -45,7 +45,7 @@ def generate_meteors(dt):
     meteor_instance = meteor.Meteor(
         difficulty=1, img=resources.meteor_image, batch=batch)
     meteor_instance.x = random.randint(0, window.width)
-    meteor_instance.y = window.height
+    meteor_instance.y = window.height + resources.meteor_image.width / 2
     meteors.append(meteor_instance)
 
 
