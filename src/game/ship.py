@@ -43,7 +43,7 @@ class Ship(physicalobject.PhysicalObject):
             self.x -= self.velocity_x * dt
         if self.keys['right']:
             self.x += self.velocity_x * dt
-        
+
         self.__check_bounds()
 
     def __check_bounds(self):
@@ -59,4 +59,3 @@ class Ship(physicalobject.PhysicalObject):
             self.x = min_x
         if self.y > max_y:
             self.y = min_y
-

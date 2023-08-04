@@ -35,6 +35,13 @@ def update(dt):
     fighter.update(dt)
     meteor_manager.update(dt)
 
+    meteors = meteor_manager.get_meteors()
+    if not fighter.is_dead:
+        for meteor in meteors:
+            is_collide = fighter.collides_with(meteor)
+            if is_collide:
+                fighter.handle_collides_with(meteor)
+
 
 pyglet.clock.schedule_interval(update, 1 / 60.0)
 
