@@ -12,7 +12,7 @@ class PhysicalObject(pyglet.sprite.Sprite):
         self.x += self.velocity_x * dt
         self.y += self.velocity_y * dt
 
-    def collides_with(self, other) -> None:
+    def collides_with(self, other) -> bool:
         return (self.x < other.x + other.width and
                 self.x + self.width > other.x and
                 self.y < other.y + other.height and
