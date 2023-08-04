@@ -24,4 +24,5 @@ fighter_move_animation = pyglet.image.Animation.from_image_sequence(
     fighter_move_texture_sequence, duration=0.8, loop=True)
 
 meteor_image = pyglet.image.load(
-    '/home/yxel/Documents/pyglet/space-war/src/assets/space-objects/PNG/Meteors/Meteor_07.png')
+    '/home/yxel/Documents/pyglet/space-war/src/assets/space-objects/PNG/Meteors/Meteor_05.png')
+center_image(meteor_image)
