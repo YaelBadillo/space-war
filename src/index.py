@@ -1,6 +1,5 @@
 import pyglet
-import random
-from game import fighter, resources, background, meteor
+from game import fighter, resources, background, meteormanager
 
 window = pyglet.window.Window(width=1000, height=750)
 batch = pyglet.graphics.Batch()
@@ -10,7 +9,9 @@ background = background.Background(
 
 fighter = fighter.Fighter(batch=batch,
                           x=window.width / 2, y=(window.height / 2) - 150)
-meteors = list()
+
+meteor_manager = meteormanager.MeteorManager(
+    window_width=window.width, window_height=window.height, batch=batch)
 
 
 @window.event
@@ -32,26 +33,12 @@ def on_key_release(symbol, modifiers):
 def update(dt):
     background.update(dt)
     fighter.update(dt)
-
-    for meteor in meteors:
-        meteor.update(dt)
-
-    for meteor in meteors:
-        if meteor.y < -meteor.height:
-            meteors.remove(meteor)
-
-
-def generate_meteors(dt):
-    meteor_instance = meteor.Meteor(
-        difficulty=1, img=resources.meteor_image, batch=batch)
-    meteor_instance.x = random.randint(0, window.width)
-    meteor_instance.y = window.height + resources.meteor_image.width / 2
-    meteors.append(meteor_instance)
+    meteor_manager.update(dt)
 
 
 pyglet.clock.schedule_interval(update, 1 / 60.0)
 
-pyglet.clock.schedule_interval(generate_meteors, 0.5)
+pyglet.clock.schedule_interval(meteor_manager.generate_meteors, 0.5)
 
 if __name__ == '__main__':
     pyglet.app.run()
