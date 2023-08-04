@@ -7,6 +7,7 @@ class Meteor(physicalobject.PhysicalObject):
 
         self._difficulty = difficulty
         self._speed = 150 * self._difficulty
+        self.rotation = 90
 
         self.scale = 0.3
 
