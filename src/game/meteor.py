@@ -1,7 +1,7 @@
-from . import physicalobject
+from . import physical_object
 
 
-class Meteor(physicalobject.PhysicalObject):
+class Meteor(physical_object.PhysicalObject):
     def __init__(self, difficulty, *args, **kwargs):
         super().__init__(*args, **kwargs)
 

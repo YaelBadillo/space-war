@@ -1,8 +1,8 @@
 from pyglet.window import key
-from . import physicalobject
+from . import physical_object
 
 
-class Ship(physicalobject.PhysicalObject):
+class Ship(physical_object.PhysicalObject):
     def __init__(self, img, *args, **kwargs):
         super(Ship, self).__init__(img=img, *args, **kwargs)
 
