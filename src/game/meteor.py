@@ -1,4 +1,4 @@
-from . import physicalobject, resources
+from . import physicalobject
 
 
 class Meteor(physicalobject.PhysicalObject):

@@ -1,1 +1,1 @@
-from . import resources, fighter, background, meteor, meteormanager
+from . import fighter, background, meteor, meteormanager

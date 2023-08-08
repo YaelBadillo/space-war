@@ -1,6 +1,7 @@
 import random
 
-from . import meteor, resources
+from . import meteor
+from resources import image_loader
 
 
 class MeteorManager:
@@ -11,11 +12,11 @@ class MeteorManager:
         self.__meteors = list()
 
     def generate_meteors(self, dt):
-        meteor_instance = meteor.Meteor(
-            difficulty=1, img=resources.meteor_image, batch=self.__batch)
+        meteor_instance = meteor.Meteor(difficulty=1, img=image_loader.ImageLoader.centered_image(
+        ).load('assets/space-objects/PNG/Meteors/Meteor_05.png'), batch=self.__batch)
         meteor_instance.x = random.randint(
             0 + meteor_instance.width / 2, self.__window_width - meteor_instance.width / 2)
-        meteor_instance.y = self.__window_height + resources.meteor_image.width / 2
+        meteor_instance.y = self.__window_height + meteor_instance.image.width / 2
         self.__meteors.append(meteor_instance)
 
     def update(self, dt):

@@ -1,11 +1,12 @@
 import pyglet
-from game import fighter, resources, background, meteormanager
+from game import fighter, background, meteormanager
+from resources import image_loader
 
 window = pyglet.window.Window(width=1000, height=750)
 batch = pyglet.graphics.Batch()
 
-background = background.Background(
-    resources.background_image, 100, batch)
+background = background.Background(image_loader.ImageLoader.load(
+    'assets/background/purple-nebula/purple-nebula-7.png'), 100, batch)
 
 fighter = fighter.Fighter(batch=batch,
                           x=window.width / 2, y=(window.height / 2) - 150)
