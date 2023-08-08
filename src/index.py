@@ -1,5 +1,5 @@
 import pyglet
-from game import fighter, background, meteormanager
+from game import fighter, background, meteor_manager
 from resources import image_loader
 
 window = pyglet.window.Window(width=1000, height=750)
@@ -11,7 +11,7 @@ background = background.Background(image_loader.ImageLoader.load(
 fighter = fighter.Fighter(batch=batch,
                           x=window.width / 2, y=(window.height / 2) - 150)
 
-meteor_manager = meteormanager.MeteorManager(
+meteor_manager = meteor_manager.MeteorManager(
     window_width=window.width, window_height=window.height, batch=batch)
 
 
