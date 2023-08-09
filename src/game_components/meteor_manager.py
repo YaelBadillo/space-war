@@ -1,6 +1,6 @@
 import random
 
-from . import meteor
+from game_objects import meteor
 from resources import image_loader
 
 
