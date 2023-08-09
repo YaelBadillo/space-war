@@ -3,8 +3,10 @@ import pyglet
 from game_components import background_manager, meteor_manager
 from game_objects.ships import fighter
 from resources import image_loader
+from constants import window_constants
 
-window = pyglet.window.Window(width=1000, height=750)
+window = pyglet.window.Window(
+    width=window_constants.width, height=window_constants.height)
 batch = pyglet.graphics.Batch()
 
 background_manager = background_manager.BackgroundManager(image_loader.ImageLoader.load(
