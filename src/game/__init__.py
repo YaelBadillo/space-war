@@ -1,1 +1,1 @@
-from . import background, meteor_manager
+from . import background

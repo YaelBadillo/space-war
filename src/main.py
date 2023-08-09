@@ -1,12 +1,13 @@
 import pyglet
-from game import background, meteor_manager
+
+from game_components import background_manager, meteor_manager
 from game_objects.ships import fighter
 from resources import image_loader
 
 window = pyglet.window.Window(width=1000, height=750)
 batch = pyglet.graphics.Batch()
 
-background = background.Background(image_loader.ImageLoader.load(
+background_manager = background_manager.BackgroundManager(image_loader.ImageLoader.load(
     'assets/background/purple-nebula/purple-nebula-7.png'), 100, batch)
 
 fighter = fighter.Fighter(batch=batch,
@@ -33,7 +34,7 @@ def on_key_release(symbol, modifiers):
 
 
 def update(dt):
-    background.update(dt)
+    background_manager.update(dt)
     fighter.update(dt)
     meteor_manager.update(dt)
 

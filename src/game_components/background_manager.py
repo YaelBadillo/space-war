@@ -1,12 +1,12 @@
 import pyglet
 
 
-class Background():
+class BackgroundManager():
     __number_of_sprites = 2
 
     def __init__(self, background_image, speed, batch):
         self.__background_sprites = [pyglet.sprite.Sprite(
-            background_image, batch=batch) for _ in range(Background.__number_of_sprites)]
+            background_image, batch=batch) for _ in range(BackgroundManager.__number_of_sprites)]
 
         self.__speed = speed
 
