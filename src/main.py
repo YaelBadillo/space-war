@@ -1,5 +1,6 @@
 import pyglet
-from game import fighter, background, meteor_manager
+from game import background, meteor_manager
+from game_objects.ships import fighter
 from resources import image_loader
 
 window = pyglet.window.Window(width=1000, height=750)

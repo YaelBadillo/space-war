@@ -1,5 +1,5 @@
 from pyglet.window import key
-from . import physical_object
+from game_objects import physical_object
 
 
 class Ship(physical_object.PhysicalObject):
